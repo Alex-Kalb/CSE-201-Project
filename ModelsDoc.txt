@@ -1,0 +1,36 @@
+The backend for the Miami Marketplace project consists of using PostgreSQL
+for Python support with SQL and Django. With these two a database can be set up
+on a local server, and will provide the backend functionality for the HTML code
+that gets created on the frontend. Right now the project has three database
+tables that it makes use of that will be connected to the front end.
+
+Under models.py there are three databased tables with different functionality.
+They are explained in detail below:
+
+ORDER - A table for tracking user interaction with the HTML
+   # "S" (sell) - Will mark when a user requests to put an item up for sale
+   # "B" (buy) - Will mark when a user requests to buy an item
+   # status - Marks whether the request goes through correctly
+   # date - Marks the time/date of the request
+   # order owner - Marks who made the request using a foreign key to an account               
+                   object 
+
+ACCOUNT - A table for tracking user accounts
+   # UID - A unique user ID for security
+   # name - The username for the account
+   # email - The email that belongs to a specfic account
+   # phone - The phone number that belongs to a specfic count
+   # cart - The cart that belongs to a specfic account. This holds products and
+            saves what a person adds to their cart
+
+PRODUCT - A table for tracking products on the site
+   # name - The name of the product
+   # condition - The condition the product is in
+   # price - The price of a product set by the owner
+   # order sell - The user ID of the person who put the product up for sale
+   # order buy - The user ID of whoever makes the purchase of a product
+
+The front end will be able to call different GET, POST, and DELETE functions
+that allow the HTML to interact with the created database. This will allow the 
+HTML to display information in the database, as well as upload things to the 
+database and remove them all from the front end.
