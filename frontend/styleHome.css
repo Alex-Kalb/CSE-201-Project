@@ -1,59 +1,36 @@
 * {
     box-sizing: border-box;
-    font-family: monospace;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #777;
 }
 
-html, body {
-    margin: 0;
-    padding: 0;
-}
-
-.nav ul {
-    margin: 0;
-}
-
-.nav li {
-    display: inline;
-}
-
-.nav a {
-    display: inline-block;
-    padding: .5em;
-    color: red;
-    text-decoration: none;
-}
 
 .main-nav {
     text-align: center;
     font-size: 1.1em;
     font-weight: lighter;
-    border-bottom: 1px solid rgba(255, 255, 255, .3);
 }
 
-.main-nav li {
-    padding: 0 5%;
+a {
+    color: indianred;
 }
 
-.nav a:hover {
+a:hover {
     background-color: rgba(255, 255, 255, .3);
 }
-head {
+body {
     background-image: url(https://miamioh.edu/about/_files/images/about/hero.jpg);
-    background-blend-mode: multiply;
-        background-size: cover;
-    padding-bottom: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    size: 100%;
 }
 
-.web-name {
+h1 {
     text-align: center;
     margin: 0;
-    font-size: 4em;
-    color:red;
+    color:indianred;
     font-weight: normal;
-}
-
-.web-name-large {
     font-size: 5em;
 }
 
@@ -67,7 +44,7 @@ head {
     padding: 0 1.5em;
 }
 
-.section-header {
+h2 {
     font-weight: normal;
     color: #333;
     text-align: center;
@@ -83,10 +60,11 @@ head {
 
 .btn-primary {
     color: white;
-    background-color: red;
+    background-color: indianred;
     border: none;
     border-radius: .3em;
     font-weight: bold;
+    padding: 5px;
 }
 
 .btn-primary:hover {
@@ -94,7 +72,10 @@ head {
 }
 
 .shop-item {
-    margin: 30px;
+    text-align: center;
+    background-image: linear-gradient(rgb(211, 211, 211, 0.85), rgb(128, 128, 128, 0.85));
+    border-radius: 25px;
+    margin: auto;
 }
 
 .shop-item-title {
@@ -105,10 +86,15 @@ head {
     font-size: 1em;
     color: #333;
     margin-bottom: 15px;
+    background-color: indianred;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
 }
 
 .shop-item-image {
     height: 150px;
+    width: 250px;
+    opacity: 70%;
 }
 
 .shop-item-details {
@@ -119,6 +105,7 @@ head {
 
 .shop-item-price {
     color: #333;
+    padding-right: 10px;
 }
 
 .shop-items {
