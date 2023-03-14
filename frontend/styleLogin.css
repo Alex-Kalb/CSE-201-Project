@@ -1,10 +1,20 @@
+* {
+    box-sizing: border-box;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #777;
+}
+
 body{
     margin: 0;
     padding: 0;
     font-family: monospace;
-    background: linear-gradient(120deg,#fa1d00,#fafafa);
+    background: linear-gradient(350deg,#fa1d00,#fafafa);
     height: 100vh;
     overflow: hidden;
+}
+
+a {
+    color: indianred;
 }
 
 .center{
@@ -16,6 +26,12 @@ body{
     background: rgb(245, 227, 227);
     border-radius: 10px;
 
+}
+
+.main-nav {
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: lighter;
 }
 
 .center h1{
