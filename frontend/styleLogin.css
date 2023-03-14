@@ -22,7 +22,7 @@ a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 400px;
+    width: 25%;
     background: rgb(245, 227, 227);
     border-radius: 10px;
 
@@ -136,4 +136,8 @@ input[type="submit"]:hover{
 
 .signup_link a:hover{
     text-decoration: underline;
+}
+
+h1 {
+    margin: 5px;
 }
