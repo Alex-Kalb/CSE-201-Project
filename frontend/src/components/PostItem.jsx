@@ -2,11 +2,14 @@ import "./LogInAndSignUp.css";
 import { useNavigate, Link } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
+import { auth } from "../firebase/firebase"
+import { useAuthState } from "react-firebase-hooks/auth";
 
 function PostItem() {
+  const [user, loading, error] = useAuthState(auth);
   const navigate = useNavigate();
   const [inputState, setInputState] = useState({
-    name: "",
+    product_name: "",
     category: "",
     condition: "",
     price: 0,
@@ -23,7 +26,7 @@ function PostItem() {
   }
 
   const postData = async (data) => {
-    axios.post("/user/create_order/", inputState)
+    axios.post("http://127.0.0.1:8000/user/create_order/", {...inputState, ["uid"]: user.uid})
     .then((response) => {
         if (response.status === 200) alert("Post items successfully!");
         else alert("Post Item failed. Please try again!");
@@ -44,8 +47,8 @@ function PostItem() {
             <input
               type="text"
               required
-              name="name"
-              value={inputState.name}
+              name="product_name"
+              value={inputState.product_name}
               onChange={handleChange}
             />
             <span></span>

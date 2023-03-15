@@ -7,8 +7,8 @@ class Account(models.Model):
     uid = models.CharField(max_length=200)
     name = models.CharField(max_length=200)
     email = models.CharField(max_length=200)
-    phone = models.CharField(max_length=10)
-    cart = models.ManyToManyField('Product', null=True)
+    address = models.CharField(max_length=200)
+    cart = models.ManyToManyField('Product')
 
 class Product(models.Model):
     

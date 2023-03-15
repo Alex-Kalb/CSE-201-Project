@@ -1,4 +1,6 @@
 backend/mongodb_service_key.txt
+frontend/src/firebase/firebase_config.jsx
+node_modules/
 
 # Django #
 *.log

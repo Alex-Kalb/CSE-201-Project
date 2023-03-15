@@ -9,7 +9,7 @@ function Item({ item }) {
       <span className="shop-item-title">{item.name}</span>
       <img className="shop-item-image" src={item.img_link} />
       <div className="shop-item-details">
-        <div className="shop-item-price col-5">{item.price}</div>
+        <div className="shop-item-price col-5">${item.price}</div>
         <button
           className="btn btn-primary shop-item-button col-5"
           type="button"
@@ -26,7 +26,7 @@ function HomePage() {
   const [categoryList, setCategoryList] = useState([]);
   const [data, setData] = useState({});
   const getCategoryList = async () => {
-    const response = await axios.get(`http://localhost:3000/categoryList`);
+    const response = await axios.get("http://localhost:8000/product/list/category/");
     setCategoryList(response.data);
   };
   useEffect(() => {
@@ -35,7 +35,8 @@ function HomePage() {
   }, []);
 
   const getData = async (category) => {
-    const response = await axios.get("http://localhost:3000/" + category);
+    const request_url = "http://localhost:8000/product/category/" + category + "/";
+    const response = await axios.get(request_url);
     setData((prevData) => ({
       ...prevData,
       [category]: response.data,

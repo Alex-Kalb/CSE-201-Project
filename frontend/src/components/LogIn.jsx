@@ -5,14 +5,14 @@ import { logInWithEmailAndPassword } from "../firebase/firebase";
 // import axios from "axios";
 
 function LogIn() {
-  //   const navigate = useNavigate();
+    const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     logInWithEmailAndPassword(email, password).then((user) => {
-      console.log(user.uid);
+      if (user) navigate('/');
     });
   };
 

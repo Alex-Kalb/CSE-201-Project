@@ -21,6 +21,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('product/all/', views.get_all_product),
     path('account/add/', views.add_account),
-    path('order/add/', views.add_order),
-    path('account/all/', views.get_all_account)
+    path('user/create_order/', views.add_order),
+    path('account/all/', views.get_all_account),
+    path('product/list/<str:field>/', views.get_fields_content),
+    path('product/category/<str:category>/', views.get_product_category),
 ]
