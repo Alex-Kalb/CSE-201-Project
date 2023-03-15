@@ -1,0 +1,27 @@
+Views.py is code for handling how the backend should interact with different
+pices of the front end. Right now it contains several different POST and GET
+functions that deal with our databases and HTML code:
+
+get_fields_content
+   # This returns different information about a product
+
+get_product_category
+   # Specfically looks for the category that a product falls under
+
+get_all_product
+   # Finds all products in the database
+
+add_account
+   # Allows a new user to open an account, and adds them to
+     a database of users
+
+get_all_account
+    # Finds all registered users 
+
+add_order
+   # Creates a new product object and adds it to the database,
+     this allows for items to be created for the marketplace
+
+These are the current methods our backend is capable of running.
+Using this users can not only eventually log onto our site, but
+can upload items to sell that can be displayed on our main page
