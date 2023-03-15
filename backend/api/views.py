@@ -13,52 +13,62 @@ from rest_framework.decorators import api_view
 def get_all_product(request):
     if request.method == 'GET':
         products = Product.objects.all()
-        if not products:    return Response({})
+        if not products:
+            return Response({})
         serializer = ProductSerializer(products, many=True)
-        
+
         return Response(serializer.data)
-    
+
+
 @api_view(['POST'])
 def add_account(request):
     if request.method == 'POST':
+        uid = request.POST.get('uid')
         name = request.POST.get('name')
         email = request.POST.get('email')
         phone = request.POST.get('phone')
 
         account = Account()
+        account.uid = uid
         account.name = name
         account.email = email
         account.phone = phone
         account.save()
 
         print(name)
-        return Response({'user_id': account.id},
+        return Response({"Create user successfully"},
                         status=status.HTTP_201_CREATED)
+
 
 @api_view(['GET'])
 def get_all_account(request):
     if request.method == 'GET':
         accounts = Account.objects.all()
-        if not accounts:    return Response({})
+        if not accounts:
+            return Response({})
         serializer = AccountSerializer(accounts, many=True)
-        
+
         return Response(serializer.data)
-    
+
+
 @api_view(['POST'])
 def add_order(request):
     if request.method == 'POST':
         print("Start")
-        user_id = request.POST.get('user_id')
+        uid = request.POST.get('uid')
         product_name = request.POST.get('product_name')
         condition = request.POST.get('condition')
+        img_link = request.POST.get('img_link')
+        category = request.POST.get('category')
         price = request.POST.get('price')
         print("Got data from request")
-        order = Order(order_type='s', order_status='a', order_owner=Account.objects.get(id=user_id))
+        order = Order(order_type='s', order_status='a',
+                      order_owner=Account.objects.get(id=uid))
         order.save()
         print("Save order")
 
-
-        product = Product.objects.create(name=product_name, condition=condition, price=price, order_sell=order)
+        product = Product.objects.create(
+            name=product_name, condition=condition, price=price, order_sell=order, img_link=img_link, category=category)
 
         return Response({'order_id': order.id},
                         status=status.HTTP_201_CREATED)

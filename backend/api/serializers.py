@@ -9,9 +9,9 @@ class OrderSerializer(serializers.ModelSerializer):
 class ProductSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product
-        fields = ['id', 'name', 'condition', 'price', 'order_sell', 'order_buy']
+        fields = ['id', 'name', 'condition', 'price', 'order_sell', 'order_buy', 'img_link', 'category']
 
 class AccountSerializer(serializers.ModelSerializer):
     class Meta:
         model = Account
-        fields = ['id', 'name', 'email', 'phone', 'cart']
+        fields = ['id', 'uid', 'name', 'email', 'phone', 'cart']
