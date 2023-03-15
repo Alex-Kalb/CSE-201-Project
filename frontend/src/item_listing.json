@@ -1,0 +1,61 @@
+{
+    "categoryList": [
+        "furniture",
+        "book",
+        "electronics"
+    ],
+    "furniture": [
+        {
+            "category": "furniture",
+            "name": "Bed Frame",
+            "uid": "12345",
+            "id": "1",
+            "price": "129.99",
+            "img_link": "https://hips.hearstapps.com/hmg-prod/images/haven-bright-foot-1599077719.jpg?crop=0.619xw:1.00xh;0.185xw,0&resize=980:*"
+        },
+        {
+            "category": "furniture",
+            "name": "Desk",
+            "uid": "12346",
+            "id": "2",
+            "price": "99.99",
+            "img_link": "https://target.scene7.com/is/image/Target/Desks_QUIVER-201014-1602702882213"
+        }
+    ],
+    "book": [
+        {
+            "category": "book",
+            "name": "Micro Biology: The Human Experience",
+            "uid": "12345",
+            "id": "3",
+            "price": "129.99",
+            "img_link": "https://i.ebayimg.com/images/g/QXsAAOSwSqRjbBFz/s-l500.jpg"
+        },
+        {
+            "category": "book",
+            "name": "Microeconomics in Context",
+            "uid": "12345",
+            "id": "4",
+            "price": "86.36",
+            "img_link": "https://m.media-amazon.com/images/I/71tj6nuiBjL._AC_UF350,350_QL50_.jpg"
+        }
+    ],
+    "electronics": [
+        {
+            "category": "electronics",
+            "name": "Iphone",
+            "uid": "12346",
+            "id": "5",
+            "price": "1000.99",
+            "img_link": "https://i.ebayimg.com/images/g/QXsAAOSwSqRjbBFz/s-l500.jpg"
+        },
+        {
+            "category": "electronics",
+            "name": "Beat headphone",
+            "uid": "12347",
+            "id": "6",
+            "price": "100.99",
+            "img_link": "https://i.ebayimg.com/images/g/QXsAAOSwSqRjbBFz/s-l500.jpg"
+        }
+    ]
+}

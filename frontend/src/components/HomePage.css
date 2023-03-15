@@ -1,15 +1,16 @@
+
 * {
     box-sizing: border-box;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #777;
-}
-
-
-.main-nav {
+  }
+  
+  
+  .main-nav {
     text-align: center;
     font-size: 1.1em;
     font-weight: lighter;
-}
+  }
 
 a {
     color: indianred;
@@ -19,7 +20,7 @@ a:hover {
     background-color: rgba(255, 255, 255, .3);
 }
 body {
-    background-image: url(https://miamioh.edu/about/_files/images/about/hero.jpg);
+    background-image: url(download.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
