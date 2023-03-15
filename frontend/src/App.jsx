@@ -8,6 +8,7 @@ import {
 import LogIn from "./components/LogIn";
 import SignUp from "./components/SignUp";
 import HomePage from "./components/HomePage";
+import PostItem from "./components/PostItem";
 import "./App.css";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/user/login" element={<LogIn />} />
           <Route path="/user/signup" element={<SignUp />} />
+          <Route path="/user/create_order" element={<PostItem />} />
         </Routes>
       </Router>
       {/* <div className="container">
