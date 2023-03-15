@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Product Posting</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="styleLogin.css">
+    </head>
+    <script
+        src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+        crossorigin="anonymous"></script>
+    <body>
+        <div class="row main-nav">
+            <div class="col"><a href="MiamiHomepage.html">Home</a></div>
+            <div class="col"><a>Orders & Returns</a></div>
+            <div class="col"><a href="MiamiMarketplaceLogIn.html">Login/Sign up</a></div>
+            <div class="col"><a>Help</a></div>
+        </div>
+        <div class="center">
+            <h1>Post a Product</h1>
+            <form action="/user/create_order/" method="POST">
+            <div class="txt_field">
+                <input type="text" name="name" required>
+                <span></span>
+                <label>Product Name</label>
+            </div>
+            <div class="txt_field">
+                <input type="text" name="category" required>
+                <span></span>
+                <label>Product Category</label>
+            </div>
+            <div class="txt_field">
+                <input type="text" name="condition" required>
+                <span></span>
+                <label>Conditon</label>
+            </div>
+            <div class="txt_field">
+                <input type="text" name="price" required>
+                <span></span>
+                <label>Price</label>
+            </div>
+            <div class="txt_field">
+                <input type="url" name="img_link" required>
+                <span></span>
+                <label>Image Link</label>
+            </div>
+            <input type="submit" value="Post">
+        </form>
+        </div>
+    </body>
+</html>
