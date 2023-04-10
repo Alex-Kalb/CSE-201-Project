@@ -1,3 +1,3 @@
-# CSE-201-Project
+# Miami Marketplace
 
-(c) Miami Marketplace LLC MMXXIII
+(c) Brick by Brick LLC MMXXIII
