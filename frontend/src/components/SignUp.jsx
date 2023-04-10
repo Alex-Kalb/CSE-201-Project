@@ -7,7 +7,6 @@ import axios from "axios";
 function SignUp() {
   const navigate = useNavigate();
   const [inputState, setInputState] = useState({
-    uid: "",
     name: "",
     address: "",
     email: "",
@@ -28,13 +27,9 @@ function SignUp() {
     console.log("register");
     const user = await registerWithEmailAndPassword(inputState.email, inputState.password);
     if (user) {
-      setInputState({
-        ...inputState,
-        ["uid"]: user.uid,
-      });
       try {
         const {password, ...dataSent} = inputState
-        const response = await axios.post("http://127.0.0.1:8000/account/add/", dataSent);
+        const response = await axios.post("http://127.0.0.1:8000/account/add/", {...dataSent, ["uid"]: user.uid});
         if (response.status === 200) navigate("/");
       } catch (error) {
         console.error(error);
