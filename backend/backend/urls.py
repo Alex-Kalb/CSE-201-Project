@@ -15,7 +15,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from api import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('clear/', views.delete_all),
+    path('product/all/', views.get_all_product),
+    path('account/add/', views.add_account),
+    path('user/create_order/', views.add_order),
+    path('account/all/', views.get_all_account),
+    path('product/list/<str:field>/', views.get_fields_content),
+    path('product/category/<str:category>/', views.get_product_category),
+    path('product/sort-name', views.sort_products_by_name),
+    path('product/sort-price', views.sort_products_by_price),
+    path('product/search', views.search)
 ]
