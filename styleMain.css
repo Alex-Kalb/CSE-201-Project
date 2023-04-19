@@ -4,7 +4,9 @@
     color: #777;
 }
 
-html, body {
+body, html {
+    background-color: antiquewhite;
+    height: 100%;
     margin: 0;
     padding: 0;
 }
@@ -21,7 +23,7 @@ html, body {
     display: inline-block;
     text-align: center;
     padding: .5em;
-    color: #fa5b69;
+    color: antiquewhite;
     text-decoration: none;
 }
 
@@ -46,7 +48,7 @@ html, body {
     background-color: rgba(255, 255, 255, .3);
 }
 .main-header {
-    background-image: url(https://color-hex.org/colors/c9f0f0.png);
+    background-image: url(https://images.pexels.com/photos/207142/pexels-photo-207142.jpeg?cs=srgb&dl=pexels-pixabay-207142.jpg&fm=jpg);
     background-blend-mode: multiply;
     background-size: cover;
     padding-bottom: 30px;
@@ -56,7 +58,7 @@ html, body {
     text-align: center;
     margin: 0;
     font-size: 4em;
-    color:#fa5b69;;
+    color:antiquewhite;
     font-weight: normal;
 }
 
