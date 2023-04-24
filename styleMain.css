@@ -42,7 +42,7 @@ select {
 
 .main-nav {
     text-align: right;
-    font-size: 1.1em;
+    font-size: 1.2em;
     font-weight: lighter;
     border-bottom: 1px solid rgba(255, 255, 255, .3);
 }
@@ -101,6 +101,7 @@ select {
     vertical-align: middle;
     padding: .67em .67em;
     cursor: pointer;
+    margin: auto;
 }
 
 .btn-primary {
@@ -125,6 +126,8 @@ select {
 .shop-item-title {
     display: block;
     width: 100%;
+    font-weight: bold;
+    font-size: 20px;
     text-align: left;
     color: #777;
     margin-bottom: 5px;
@@ -145,6 +148,7 @@ select {
 .shop-item-price {
     color: #777;
     padding-right: 10px;
+    font-weight: bold;
 }
 
 .shop-items {
