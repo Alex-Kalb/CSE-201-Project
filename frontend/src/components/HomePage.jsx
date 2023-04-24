@@ -50,6 +50,10 @@ function HomePage() {
     setSearchQuery(e.target.value);
   };
 
+  const handleSort = (e) => {
+    setSortOrder(e.target.value);
+  };
+
   useEffect(() => {
     getCategoryList();
   }, []);
@@ -75,10 +79,10 @@ function HomePage() {
       }
     }
     return acc;
-  }, {}); 
+  }, {});
 
   return (
-    <>
+    <html>
       <header class="main-header">
             <nav class="nav main-nav">
                 <ul>
@@ -98,6 +102,15 @@ function HomePage() {
                 <input type="text" placeholder="Search.." value={searchQuery} onChange={handleSearch}/>
             </nav>
         </header>
+
+        <div class="sort">
+            <label for="sort-options">Sort by</label>
+            <select name="sort-type" id="sort-type" onChange={handleSort}>
+                <option>Newest</option>
+                <option value="name">Name</option>
+                <option value="price">Price</option>
+            </select>
+        </div>
       
       {Object.entries(filteredData).map(([category, items]) => {
         return (
@@ -113,7 +126,7 @@ function HomePage() {
             </section>
         );
       })}
-      </>
+      </html>
   );
 }
 

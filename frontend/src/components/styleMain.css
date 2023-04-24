@@ -1,14 +1,15 @@
 * {
     box-sizing: border-box;
-    font-family: 'Serif';
+    font-family: 'Franklin Gothic Medium', ;
     color: #777;
-    margin: 0;
-    padding: 0;
 }
 
-html, body {
+body, html {
+    background-color: antiquewhite;
+    height: 100%;
     margin: 0;
     padding: 0;
+    overflow-y: auto;
 }
 
 .nav ul {
@@ -19,17 +20,30 @@ html, body {
     display: inline;
 }
 
+.sort, option, .sort-type, select {
+    font-size: 20px;
+    font-family: 'Times New Roman';
+}
+
+text {
+    font-family: 'Times New Roman';
+}
+
+select {
+    border-radius: 5px;
+}
+
 .nav a {
     display: inline-block;
     text-align: center;
     padding: .5em;
-    color: #fa5b69;
+    color: antiquewhite;
     text-decoration: none;
 }
 
 .main-nav {
     text-align: right;
-    font-size: 1.1em;
+    font-size: 1.2em;
     font-weight: lighter;
     border-bottom: 1px solid rgba(255, 255, 255, .3);
 }
@@ -48,18 +62,17 @@ html, body {
     background-color: rgba(255, 255, 255, .3);
 }
 .main-header {
-    background-image: url(https://color-hex.org/colors/c9f0f0.png);
+    background-image: url(https://images.pexels.com/photos/207142/pexels-photo-207142.jpeg?cs=srgb&dl=pexels-pixabay-207142.jpg&fm=jpg);
     background-blend-mode: multiply;
     background-size: cover;
     padding-bottom: 30px;
-    width: 100vw;
 }
 
 .web-name {
     text-align: center;
     margin: 0;
     font-size: 4em;
-    color:#fa5b69;;
+    color:antiquewhite;
     font-weight: normal;
 }
 
@@ -89,6 +102,7 @@ html, body {
     vertical-align: middle;
     padding: .67em .67em;
     cursor: pointer;
+    margin: auto;
 }
 
 .btn-primary {
@@ -113,6 +127,8 @@ html, body {
 .shop-item-title {
     display: block;
     width: 100%;
+    font-weight: bold;
+    font-size: 20px;
     text-align: left;
     color: #777;
     margin-bottom: 5px;
@@ -133,6 +149,7 @@ html, body {
 .shop-item-price {
     color: #777;
     padding-right: 10px;
+    font-weight: bold;
 }
 
 .shop-items {
