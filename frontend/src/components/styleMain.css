@@ -1,7 +1,9 @@
 * {
     box-sizing: border-box;
-    font-family: 'Franklin Gothic Medium', ;
+    font-family: 'Serif';
     color: #777;
+    margin: 0;
+    padding: 0;
 }
 
 html, body {
@@ -50,6 +52,7 @@ html, body {
     background-blend-mode: multiply;
     background-size: cover;
     padding-bottom: 30px;
+    width: 100vw;
 }
 
 .web-name {

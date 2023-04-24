@@ -18,10 +18,11 @@ function LogIn() {
 
   return (
     
-      <div className="center">
-        <h1>MIAMI MARKETPLACE</h1>
+    <body>
+      <div class="center">
+        <h1>Miami Marketplace</h1>
         <form onSubmit={handleSubmit}>
-          <div className="txt_field">
+          <div class="txt_field">
             <input
               type="text"
               required
@@ -29,9 +30,9 @@ function LogIn() {
               onChange={(e) => setEmail(e.target.value)}
             />
             <span></span>
-            <label>Email</label>
+            <label>Username</label>
           </div>
-          <div className="txt_field">
+          <div class="txt_field">
             <input
               type="password"
               required
@@ -41,16 +42,17 @@ function LogIn() {
             <span></span>
             <label>Password</label>
           </div>
-          <div className="pass">Forgot Password?</div>
+          <div class="pass">Forgot Password?</div>
           <input type="submit" value="Login" />
-          <div className="signup_link">
+          <div class="signup_link">
             Not a member?
-            <Link to="/user/signup" className="txt2 p-l-10">
+            <Link to="/user/signup" class="txt2 p-l-10">
               Signup
             </Link>
           </div>
         </form>
       </div>
+      </body>
   );
 }
 

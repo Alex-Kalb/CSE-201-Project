@@ -52,7 +52,7 @@ function SignUp() {
       </head>
       <body>
         <div className="center">
-          <h1>MIAMI MARKETPLACE</h1>
+          <h1>Miami Marketplace</h1>
           <form onSubmit={handleSubmit}>
             <div className="txt_field">
               <input

@@ -1,28 +1,25 @@
-import "./HomePage.css";
-import Dashboard from "./Dashboard";
+import "./styleMain.css";
 import { useNavigate, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
 function Item({ item }) {
   return (
-    <div className="shop-item">
-      <Link to={`/item/${item.id}`} className="shop-item-title">
+    <div class="shop-item">
+      <span class="shop-item-title">
         {item.name}
-      </Link>
-      <img className="shop-item-image" src={item.img_link} />
-      <div className="shop-item-details">
-        <div className="shop-item-price">${item.price}</div>
-        <div className="shop-item-buttons">
-          <button className="btn btn-primary shop-item-button" type="button" style={{ width: '120px', margin: '0 5px' }}>
+      </span>
+      <img class="shop-item-image" src={item.img_link} />
+      <div class="shop-item-details">
+        <span class="shop-item-price">${item.price}</span>
+          <button class="btn btn-primary shop-item-button" type="button" style={{ width: '120px', margin: '0 5px' }}>
             Favorite
           </button>
-          <button className="btn btn-primary shop-item-button" type="button" style={{ width: '120px', margin: '0 5px' }}>
+          <button class="btn btn-primary shop-item-button" type="button" style={{ width: '120px', margin: '0 5px' }}>
             Contact Seller
           </button>
         </div>
       </div>
-    </div>
   );
 }
 
@@ -81,45 +78,42 @@ function HomePage() {
   }, {}); 
 
   return (
-    <div className="container" style={{ overflow: "scroll", height: "95vh" }}>
-      <div className="row">
-        <div className="col-md-6">
-          <button className="btn btn-primary">Favorites</button>
-        </div>
-        <div className="col-md-6 text-right">
-          <button className="btn btn-primary">Logout</button>
-        </div>
-      </div>
-      <Dashboard setSortOrder={setSortOrder} />
-      <h1>Miami Marketplace</h1>
-      <div className="row">
-        <input
-          type="text"
-          placeholder="Search for products"
-          value={searchQuery}
-          onChange={handleSearch}
-        />
-      </div>
+    <>
+      <header class="main-header">
+            <nav class="nav main-nav">
+                <ul>
+                    <li><a href="MiamiMarketplaceLogIn.html">Log In</a></li>
+                    <li><a href="FavoritePage.html">Favorites Page</a></li>
+                </ul>
+            </nav>
+            <h1 class="web-name web-name-large">Miami Marketplace</h1>
+            <nav class="nav bottom-nav">
+                <li><a href="HomePage.html">Home</a></li>
+                <li><a href="Womens.html">Women's Apparel</a></li>
+                <li><a href="Mens.html">Men's Apparel</a></li>
+                <li><a href="dorm.html">For the Dorm</a></li>
+                <li><a href="house.html">For the House</a></li>
+                <li><a href="textbooks.html">Textbooks</a></li>
+                <li><a href="electronics.html">Electronics</a></li>
+                <input type="text" placeholder="Search.." value={searchQuery} onChange={handleSearch}/>
+            </nav>
+        </header>
       
       {Object.entries(filteredData).map(([category, items]) => {
         return (
-          <div className="row" key={category}>
-            <section className="container content-section">
-              <h2>{category}</h2>
-              <div className="shop-items">
+            <section class="container content-section">
+              <h2 class = "section-header">{category}</h2>
+              <div class="shop-items">
                 {items.map((item) => {
                   return (
-                    <div className="col-sm-5 shop-item" key={item.id}>
                       <Item item={item} />
-                    </div>
                   );
                 })}
               </div>
             </section>
-          </div>
         );
       })}
-    </div>
+      </>
   );
 }
 
