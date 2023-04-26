@@ -1,115 +1,64 @@
-
-* {
-    box-sizing: border-box;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: #777;
-  }
-  
-  
-  .main-nav {
-    text-align: center;
-    font-size: 1.1em;
-    font-weight: lighter;
-  }
-
-a {
-    color: indianred;
+/* .main-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
+.main-page {
+    padding-left: 1vw;
+    padding-right: 1vw;
+    position: absolute;
+    top: 20vh;
 }
 
-a:hover {
-    background-color: rgba(255, 255, 255, .3);
-}
-body {
-    background-image: url(download.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    size: 100%;
-}
-
-h1 {
-    text-align: center;
-    margin: 0;
-    color:indianred;
-    font-weight: normal;
-    font-size: 5em;
-}
-
-.content-section {
-    margin: 8em;
-}
-
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 1.5em;
-}
-
-h2 {
-    font-weight: normal;
-    color: #333;
-    text-align: center;
-    font-size: 2.5em;
-}
-
-.btn {
-    text-align: center;
-    vertical-align: middle;
-    padding: .67em .67em;
-    cursor: pointer;
-}
-
-.btn-primary {
-    color: white;
-    background-color: indianred;
-    border: none;
-    border-radius: .3em;
-    font-weight: bold;
-    padding: 5px;
-}
-
-.btn-primary:hover {
-    background-color: rgba(239, 43, 43, 0.7)
+.shop-item-wrapper {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .shop-item {
-    text-align: center;
-    background-image: linear-gradient(rgb(211, 211, 211, 0.85), rgb(128, 128, 128, 0.85));
-    border-radius: 25px;
-    margin: auto;
+  text-align: center;
+  background-image: linear-gradient(
+    rgb(211, 211, 211, 0.85),
+    rgb(128, 128, 128, 0.85)
+  );
+  border-radius: 25px;
+  margin: auto;
 }
 
 .shop-item-title {
-    display: block;
-    width: 100%;
-    text-align: center;
-    font-weight: bold;
-    font-size: 1em;
-    color: #333;
-    margin-bottom: 15px;
-    background-color: indianred;
-    border-top-right-radius: 25px;
-    border-top-left-radius: 25px;
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1em;
+  color: #333;
+  margin-bottom: 15px;
+  background-color: indianred;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
 }
 
 .shop-item-image {
-    height: 150px;
-    width: 250px;
-    opacity: 70%;
+  height: 150px;
+  width: 250px;
+  opacity: 70%;
 }
 
 .shop-item-details {
-    display: flex;
-    align-items: center;
-    padding: 5px;
+  display: flex;
+  align-items: center;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .shop-item-price {
-    color: #333;
-    padding-right: 10px;
+  color: #333;
+  padding: 0.2vw;
 }
 
-.shop-items {
-    display: flex;
-    flex-wrap: wrap;
+.shop-item-button {
+  font-size: 0.7vw;
+  width: 70%;
+  border-radius: 5px;
 }

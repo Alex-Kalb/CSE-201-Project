@@ -1,48 +1,30 @@
-import { useState, Link } from "react";
 import {
-  BrowserRouter as Router,
   Route,
   Routes,
-  Navigate,
 } from "react-router-dom";
 import LogIn from "./components/LogIn";
 import SignUp from "./components/SignUp";
 import HomePage from "./components/HomePage";
-import PostItem from "./components/PostItem";
 import "./App.css";
+import ProtectedPostItem from "./components/ProtectiveRoutes/ProtectedPostItem";
+import ProductDetail from "./components/ProductDetail";
+import NavBar from "./components/NavBar";
+import ProtectedFavoritePage from "./components/ProtectiveRoutes/ProtectedFavoritePage";
 
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/user/login" element={<LogIn />} />
-          <Route path="/user/signup" element={<SignUp />} />
-          <Route path="/user/create_order" element={<PostItem />} />
-        </Routes>
-      </Router>
-      {/* <div className="container">
-      <div class="row">
-        <div class="col">
-          <Link to="/" className="txt2 p-l-10">
-            Home
-          </Link>
-        </div>
-        <div class="col">
-          <a>Orders & Returns</a>
-        </div>
-        <div class="col">
-          <Link to="/user/login" className="txt2 p-l-10">
-            Login
-          </Link>
-        </div>
-        <div class="col">
-          <p>Help</p>
-        </div>
+      <NavBar />
+      <div className="main-component">
+      <Routes>
+        <Route exact path="/" element={<HomePage />} />
+        <Route path="/user/login" element={<LogIn />} />
+        <Route path="/user/signup" element={<SignUp />} />
+        <Route path="/user/create_order" element={<ProtectedPostItem />} />
+        <Route path="/product/:product_id" element={<ProductDetail/>}/>
+        <Route path="/user/favorite" element={<ProtectedFavoritePage />} />
+      </Routes>
       </div>
-      </div> */}
-      
     </div>
   );
 }

@@ -2,16 +2,14 @@ from django.db import models
 
 # Create your models here.
 
-
 class Account(models.Model):
     uid = models.CharField(max_length=200)
     name = models.CharField(max_length=200)
     email = models.CharField(max_length=200)
     address = models.CharField(max_length=200)
-    cart = models.ManyToManyField('Product')
+    favorites = models.ManyToManyField('Product')
 
 class Product(models.Model):
-    
     name = models.CharField(max_length=200)
     condition = models.CharField(max_length=200)
     price = models.IntegerField()

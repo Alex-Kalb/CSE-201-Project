@@ -20,9 +20,13 @@ from api import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('product/all/', views.get_all_product),
+    path('product/<int:product_id>', views.get_product_by_id),
     path('account/add/', views.add_account),
-    path('user/create_order/', views.add_order),
     path('account/all/', views.get_all_account),
+    path('user/create_order/', views.add_order),
+    path('user/add-to-favorite/', views.add_to_favorite),
+    path('user/get-all-favorite/', views.get_favorite_item),
     path('product/list/<str:field>/', views.get_fields_content),
     path('product/category/<str:category>/', views.get_product_category),
+    path('product/search/', views.search),
 ]

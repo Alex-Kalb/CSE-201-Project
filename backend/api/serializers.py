@@ -14,4 +14,4 @@ class ProductSerializer(serializers.ModelSerializer):
 class AccountSerializer(serializers.ModelSerializer):
     class Meta:
         model = Account
-        fields = ['id', 'uid', 'name', 'email', 'address', 'cart']
+        fields = ['id', 'uid', 'name', 'email', 'address', 'favorites']

@@ -1,0 +1,35 @@
+.navbar-container {
+    height: 6vh;
+    position: absolute;
+    z-index: 3;
+    padding-top: 2px;
+}
+
+
+.navbar-nav:hover, .navlink:hover {
+    cursor: pointer;
+    color: lightblue;
+}
+.nav-link, .navbar-button {
+    font-size: 0.7vw;
+}
+
+.user-email {
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+.navbar-container::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 100%;
+    height: 20vh;
+    z-index: -2;
+    background-image: url('https://images.pexels.com/photos/207142/pexels-photo-207142.jpeg?cs=srgb&dl=pexels-pixabay-207142.jpg&fm=jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.6;
+  }
