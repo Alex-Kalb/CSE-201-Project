@@ -24,6 +24,15 @@ urlpatterns = [
     path('account/add/', views.add_account),
     path('user/create_order/', views.add_order),
     path('account/all/', views.get_all_account),
+
+    path('product/<int:item_id>/email/', views.get_product_email),
+    path('cart/add/<int:item_id>/', views.add_to_cart),
+    path('cart/remove/<int:item_id>/', views.remove_from_cart),
+    path('cart/contains/<int:item_id>/', views.get_items),
+    path('cart/items/<str:category>/', views.get_cart_items),
+    path('product/<int:product_id>/account/', views.find_account_uid),
+    path('product/<int:product_id>/remove/', views.delete_item),
+
     path('product/list/<str:field>/', views.get_fields_content),
     path('product/category/<str:category>/', views.get_product_category),
     path('product/sort-name', views.sort_products_by_name),

@@ -11,10 +11,9 @@ class Account(models.Model):
     cart = models.ManyToManyField('Product')
 
 class Product(models.Model):
-    
     name = models.CharField(max_length=200)
     condition = models.CharField(max_length=200)
-    price = models.IntegerField()
+    price = models.DecimalField(max_digits=10, decimal_places=2)
     order_sell = models.ForeignKey('Order', on_delete=models.CASCADE, related_name='order_sell', null=True)
     order_buy = models.ForeignKey('Order', on_delete=models.CASCADE, related_name='order_buy', null=True)
     img_link = models.CharField(max_length=500)
