@@ -8,8 +8,8 @@ import {
 import LogIn from "./components/LogIn";
 import SignUp from "./components/SignUp";
 import HomePage from "./components/HomePage";
-import HomePage_demo from "./components/HomePage_demo";
 import PostItem from "./components/PostItem";
+import FavoritesPage from "./components/FavoritesPage";
 import "./App.css";
 
 function App() {
@@ -18,9 +18,9 @@ function App() {
       <Router>
         <Routes>
           <Route exact path="/" element={<HomePage />} />
-          <Route path="/demo/home" element={<HomePage_demo />} />
           <Route path="/user/login" element={<LogIn />} />
           <Route path="/user/create_order" element={<PostItem />} />
+          <Route path="/user/favorite" element={<FavoritesPage />} />
           <Route path="/user/signup" element={<SignUp />} />
         </Routes>
       </Router>

@@ -1,11 +1,16 @@
 * {
     box-sizing: border-box;
-    font-family: 'Franklin Gothic Medium', ;
+    font-family: 'Serif';
     color: #777;
 }
 
+*::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
 body, html {
-    background-color: antiquewhite;
+    background-color: rgb(247, 238, 228);
     height: 100%;
     margin: 0;
     padding: 0;
@@ -17,10 +22,21 @@ body, html {
 }
 
 .nav li {
-    display: inline;
+    display: inline-block;
+    color: #eae1d6;
+  }
+
+.sort {
+    font-size: 22px;
+    font-family: 'Times New Roman';
 }
 
-.sort, option, .sort-type, select {
+.sort-type, select {
+    font-size: 15px;
+    font-family: 'Times New Roman';
+}
+
+option {
     font-size: 20px;
     font-family: 'Times New Roman';
 }
@@ -43,36 +59,37 @@ select {
 
 .main-nav {
     text-align: right;
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-weight: lighter;
     border-bottom: 1px solid rgba(255, 255, 255, .3);
-}
-
-.main-nav li {
-    padding: 0 1%;
 }
 
 .bottom-nav {
     color: white;
     text-align: center;
     font-size: 1.1em;
+    display: flex;
+    justify-content: center;
 }
 
 .nav a:hover {
     background-color: rgba(255, 255, 255, .3);
 }
+
 .main-header {
-    background-image: url(https://images.pexels.com/photos/207142/pexels-photo-207142.jpeg?cs=srgb&dl=pexels-pixabay-207142.jpg&fm=jpg);
+    background-image: url(https://trumpwallpapers.com/wp-content/uploads/Brick-Wallpaper-02-2560x1440-1.jpg);
     background-blend-mode: multiply;
     background-size: cover;
     padding-bottom: 30px;
+    background-color: rgb(0, 0, 0, .35);
 }
+
 
 .web-name {
     text-align: center;
     margin: 0;
     font-size: 4em;
-    color:antiquewhite;
+    color:#eae1d6;
     font-weight: normal;
 }
 
@@ -102,16 +119,16 @@ select {
     vertical-align: middle;
     padding: .67em .67em;
     cursor: pointer;
-    margin: auto;
 }
 
 .btn-primary {
     color: white;
-    background-color: #fa5b69;;
+    background-color: #a44f44ef;;
     border: none;
     border-radius: .3em;
     font-weight: bold;
     padding: 5px;
+    margin-left: 10px;
 }
 
 .btn-primary:hover {
@@ -122,6 +139,7 @@ select {
     text-align: center;
     border-radius: 10px;
     margin: auto;
+    padding: 15px;
 }
 
 .shop-item-title {
@@ -231,3 +249,22 @@ select {
     color:#43474D;
     margin-right:20px;
 }
+
+.search-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  input.search-bar {
+    width: 75%;
+    height: 60%;
+    padding: 0.5em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }

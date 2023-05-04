@@ -42,7 +42,11 @@ function LogIn() {
             <span></span>
             <label>Password</label>
           </div>
-          <div class="pass">Forgot Password?</div>
+          <div class="signup_link">
+            <Link to="/" class="txt2 p-l-10">
+              Use Logged Out
+            </Link>
+          </div>
           <input type="submit" value="Login" />
           <div class="signup_link">
             Not a member?
