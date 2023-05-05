@@ -11,10 +11,10 @@ import {
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyCkkPiXvvoLiRdbDRs8mi-vyQRZk4BQnQo",
-  authDomain: "miamimarketplace-b1540.firebaseapp.com",
-  projectId: "miamimarketplace-b1540",
-  storageBucket: "miamimarketplace-b1540.appspot.com",
+  apiKey: "YOUR_FIREBASE_API_KEY",
+  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_PROJECT_ID.appspot.com",
   messagingSenderId: "990617291556",
   appId: "1:990617291556:web:580adf9682fdacb42bc1b1",
   measurementId: "G-NTKL6Z4LKE"
